@@ -18,9 +18,9 @@ public class Container {
 
     private Container() {
         dbConnect = new DBConnect(
+                "jdbc:postgresql://localhost:5432/contact_book",
                 "postgres",
-                "",
-                "jdbc:postgresql://localhost:5432/contact_book"
+                ""
         );
         contactDao = new ContactBookDao(dbConnect);
         gson = new Gson();
